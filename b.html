@@ -1,0 +1,76 @@
+<html manifest="example.appcache">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<head>
+    <title>UVLOVE</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-color: black;
+        }
+        strong {
+            position: relative; 
+            top: -200px;
+            font-size: 1000px;
+            font-weight: bold;
+            font-style: normal;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:rgb(0, 89, 255);
+			overflow: visible;
+			z-index:1;
+        }
+        .em {
+            position: relative; 
+			z-index:2;
+			background: #000000;
+        }
+		i {
+            /* left: -50px; 
+            top: -150px; */
+            font-size: 40px;
+            font-weight: bold;x
+            font-style: normal;
+            font-family: monospace;
+            color:antiquewhite;
+        }
+		.blue {
+			background: #1E47FF;
+			height: 50px;
+		}
+    </style>
+<script type="text/javascript">
+    var clicks = 0;
+    function helloup() {
+    	clicks = (clicks + 1) % 10;
+        document.getElementById("clicks").innerHTML = clicks;
+        };
+    function hellodown() {
+        clicks -= 1;
+        document.getElementById("clicks").innerHTML = clicks;
+        };
+    </script>
+
+
+<script>
+function myFunction() {
+  alert("You pressed a key inside the input field");
+}
+</script>
+<table width="100%" border="0">
+  <tbody>
+    <tr>
+      <td><input autofocus type="text" onkeypress="helloup()" class="em"></td>
+    </tr>
+    <tr>
+      <td onClick="helloup()"><strong id="clicks">0</strong></td>
+    </tr>
+  </tbody>
+</table>
+		
+   
+	
+</body>
+</html>
